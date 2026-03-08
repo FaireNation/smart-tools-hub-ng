@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "icon": "truck",
+    "title": "Fast Delivery",
+    "description": "Quick and reliable nationwide delivery"
+  },
+  {
+    "id": 2,
+    "icon": "shield",
+    "title": "Quality Guarantee",
+    "description": "All products are tested & certified"
+  },
+  {
+    "id": 3,
+    "icon": "headphones",
+    "title": "24/7 Support",
+    "description": "Contact us anytime for help"
+  },
+  {
+    "id": 4,
+    "icon": "refresh",
+    "title": "Easy Returns",
+    "description": "7-day hassle-free return policy"
+  }
+]

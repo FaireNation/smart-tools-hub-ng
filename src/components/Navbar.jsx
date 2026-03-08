@@ -25,7 +25,6 @@ export default function Navbar({ onSearchOpen }) {
       <nav className="navbar">
         <div className="container navbar-inner">
           <a href="#" className="logo">
-            <span className="logo-icon">⚡</span>
             SmartToolsHub<span className="logo-ng">Ng</span>
           </a>
 
@@ -40,7 +39,10 @@ export default function Navbar({ onSearchOpen }) {
             <button className="nav-search-btn" onClick={onSearchOpen} title="Search products">
               <FiSearch />
             </button>
-            <a href={`https://wa.me/${config.whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm nav-whatsapp">
+            <a href={`https://wa.me/${config.whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="nav-whatsapp-icon">
+              <FaWhatsapp />
+            </a>
+            <a href={`https://wa.me/${config.whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm nav-whatsapp-full">
               <FaWhatsapp /> Chat Us
             </a>
             <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

@@ -9,7 +9,6 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <h3>
-              <span className="logo-icon">⚡</span>
               SmartToolsHub<span className="logo-ng">Ng</span>
             </h3>
             <p>{config.tagline}</p>

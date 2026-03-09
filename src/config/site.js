@@ -14,12 +14,12 @@ const siteConfig = {
   address: 'Lagos, Nigeria',
 
   // ---- Contact ----
-  phone: '+234 000 000 0000',          // Displayed phone number
-  email: 'info@smarttoolshubng.com',   // Displayed email address
+  phone: '+234 9071219829',          // Displayed phone number
+  email: 'smarttoolshubs@gmail.com',   // Displayed email address
 
   // ---- WhatsApp ----
   // Just the digits, no spaces or +  (e.g. '2348012345678')
-  whatsappNumber: '2340000000000',
+  whatsappNumber: '2349071219829',
 
   // ---- Delivery ----
   // (no free delivery offered)

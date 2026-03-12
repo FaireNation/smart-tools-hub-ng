@@ -1,7 +1,5 @@
 import { useEffect, useRef } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
-import { FaWhatsapp } from 'react-icons/fa';
-import config from '../config/site';
 
 export default function Hero() {
   const heroRef = useRef(null);
@@ -36,9 +34,6 @@ export default function Hero() {
         <div className="hero-actions">
           <a href="#products" className="btn btn-primary btn-lg btn-pulse">
             Browse Products <FiArrowRight />
-          </a>
-          <a href={`https://wa.me/${config.whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-lg">
-            <FaWhatsapp /> WhatsApp Us
           </a>
         </div>
       </div>

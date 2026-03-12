@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { FiX, FiUser, FiPhone, FiMapPin, FiCreditCard, FiTruck, FiMinus, FiPlus } from 'react-icons/fi';
-import { FaWhatsapp } from 'react-icons/fa';
-import config from '../config/site';
+import { FiX, FiUser, FiPhone, FiMapPin, FiCreditCard, FiTruck, FiMinus, FiPlus, FiCheckCircle } from 'react-icons/fi';
 
 export default function OrderModal({ product, onClose }) {
   const [form, setForm] = useState({
@@ -13,6 +11,8 @@ export default function OrderModal({ product, onClose }) {
   });
   const [quantity, setQuantity] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [errors, setErrors] = useState({});
 
   const formatPrice = (price) =>
@@ -37,7 +37,7 @@ export default function OrderModal({ product, onClose }) {
     return errs;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) {
@@ -45,23 +45,32 @@ export default function OrderModal({ product, onClose }) {
       return;
     }
     setErrors({});
+    setSubmitError('');
+    setIsLoading(true);
 
-    // Build WhatsApp message
-    const payLabel = form.paymentOption === 'pay-on-delivery' ? 'Pay on Delivery' : 'Pay Before Delivery';
-    const msg = `\ud83d\uded2 *New Order \u2014 ${config.name}*\n\n` +
-      `*Product:* ${product.title}\n` +
-      `*Quantity:* ${quantity}\n` +
-      `*Unit Price:* ${formatPrice(product.price)}\n` +
-      `*Total:* ${formatPrice(totalPrice)}\n\n` +
-      `*Customer:* ${form.name}\n` +
-      `*Phone:* ${form.phone}\n` +
-      `*Address:* ${form.address}, ${form.city}\n` +
-      `*Payment:* ${payLabel}`;
+    try {
+      const res = await fetch('/.netlify/functions/send-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          product: { title: product.title, price: product.price },
+          quantity,
+          totalPrice: formatPrice(totalPrice),
+          form,
+        }),
+      });
 
-    const waUrl = `https://wa.me/${config.whatsappNumber}?text=${encodeURIComponent(msg)}`;
-    window.open(waUrl, '_blank');
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || 'Something went wrong. Please try again.');
+      }
 
-    setSubmitted(true);
+      setSubmitted(true);
+    } catch (err) {
+      setSubmitError(err.message || 'Failed to send order. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -78,13 +87,24 @@ export default function OrderModal({ product, onClose }) {
         <div className="modal" onClick={(e) => e.stopPropagation()}>
           <button className="modal-close" onClick={onClose}><FiX /></button>
           <div className="modal-success">
-            <div className="success-icon">\u2705</div>
-            <h2>Order Sent to WhatsApp!</h2>
-            <p>Thank you, <strong>{form.name}</strong>! Your order for <strong>{quantity}x {product.title}</strong> has been sent.</p>
+            <div className="success-icon">
+              <FiCheckCircle style={{ color: 'var(--primary)', fontSize: '3.5rem' }} />
+            </div>
+            <h2>Order Received!</h2>
+            <p>
+              Thank you, <strong>{form.name}</strong>! Your order for{' '}
+              <strong>{quantity}× {product.title}</strong> has been placed successfully.
+            </p>
             <p className="success-detail">Total: <strong>{formatPrice(totalPrice)}</strong></p>
-            <p className="success-detail">Complete the message on WhatsApp to confirm your order.</p>
-            <p className="success-detail">Payment: <strong>{form.paymentOption === 'pay-on-delivery' ? 'Pay on Delivery' : 'Pay Before Delivery'}</strong></p>
-            <button className="btn btn-primary" onClick={onClose}>Close</button>
+            <p className="success-detail">
+              Payment: <strong>{form.paymentOption === 'pay-on-delivery' ? 'Pay on Delivery' : 'Pay Before Delivery'}</strong>
+            </p>
+            <p className="success-detail">
+              Our team will contact you on <strong>{form.phone}</strong> to confirm delivery.
+            </p>
+            <button className="btn btn-primary btn-lg" onClick={onClose} style={{ marginTop: '24px', width: '100%' }}>
+              Done
+            </button>
           </div>
         </div>
       </div>
@@ -208,8 +228,18 @@ export default function OrderModal({ product, onClose }) {
             {errors.paymentOption && <span className="form-error">{errors.paymentOption}</span>}
           </div>
 
-          <button type="submit" className="btn btn-whatsapp btn-lg btn-submit">
-            <FaWhatsapp /> Send Order via WhatsApp — {formatPrice(totalPrice)}
+          {submitError && (
+            <div className="submit-error">
+              {submitError}
+            </div>
+          )}
+
+          <button
+            type="submit"
+            className="btn btn-primary btn-lg btn-submit"
+            disabled={isLoading}
+          >
+            {isLoading ? 'Sending Order…' : `Place Order — ${formatPrice(totalPrice)}`}
           </button>
         </form>
       </div>

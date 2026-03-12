@@ -37,9 +37,14 @@ export default function ProductCard({ product, onBuyNow, onViewDetails }) {
             <span className="product-old-price">{formatPrice(product.oldPrice)}</span>
           )}
         </div>
-        <button className="btn btn-primary btn-buy" onClick={() => onBuyNow(product)}>
-          <FiShoppingCart /> Buy Now
-        </button>
+        <div className="product-card-actions">
+          <button className="btn btn-outline btn-about" onClick={() => onViewDetails(product)}>
+            <FiEye /> About
+          </button>
+          <button className="btn btn-primary btn-buy" onClick={() => onBuyNow(product)}>
+            <FiShoppingCart /> Buy Now
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,72 +1,72 @@
 [
   {
     "id": 1,
-    "title": "MoS-LB1 | Tuya Wi-Fi 3D FACIAL Smart Electronic Door Lock",
+    "title": "DoS-LB1 | Tuya Wi-Fi 3D FACIAL Smart Electronic Door Lock",
     "price": 120000,
-    "image": "/images/MOS707.jpg",
+    "image": "/images/DOS707.jpg",
     "category": "Smart locks",
     "description": "Unlock your door effortlessly with 6 flexible access modes: 3D Face Recognition, Fingerprint, Swipe Card, Key, Password, and the Tuya App. Supports temporary and virtual passwords for guest access.\n\nEquipped with a 200W high-definition lens and a spacious 4.5-inch display screen. Enjoy remote video monitoring, remote unlocking, visual intercom, and active security with infrared light supplement for clear night vision.\n\nDesigned with fully automatic locking for your peace of mind. Includes anti-pry alarm, trial-and-error warning, real-time lock status monitoring, entry and exit records, and a low power reminder so you're never caught off guard.",
     "badge": "Hot"
   },
   {
     "id": 2,
-    "title": "Mos-XF16 | Face Recognition Door Lock, App Remote Control",
+    "title": "DoS-XF16 | Face Recognition Door Lock, App Remote Control",
     "price": 170000,
-    "image": "/images/MOS-XF16.jpg",
+    "image": "/images/DOS-XF16.png",
     "category": "Smart locks",
     "description": "Supports 6 convenient unlock methods: 3D Face Recognition, Wishome App, Fingerprint, Passcode, Card, and Key — giving you maximum flexibility for how you enter your home.\n\nFeatures advanced face recognition technology. Simply approach the lock and it will automatically recognise your face and unlock — completely hands-free. Perfect for when your hands are full.\n\nAutomatically locks after each entry so you never need to worry about forgetting to secure your door when heading out.\n\nPowered by a rechargeable lithium battery with super-long standby life. When the battery does run low, the built-in USB emergency interface lets you power it back up instantly.\n\nSmart alerts keep you informed — any abnormal activity triggers an instant notification to your mobile phone. Includes a digital door viewer with night vision for round-the-clock security.",
     "badge": "Hot"
   },
   {
     "id": 3,
-    "title": "MoS-K36 | Tuya Smart Wifi Door Lock",
+    "title": "DOS-MO-K36 | Tuya Smart Wifi Door Lock",
     "price": 195000,
-    "image": "/images/MOSK36.jpg",
+    "image": "/images/DOS-MO-K36.jpg",
     "category": "Smart locks",
     "description": "Built-in HD video camera for live video monitoring and recording. Greet visitors at your door with live camera streaming and 2-way audio — all from the convenience of your smartphone.\n\nSupports temporary passwords, making it easy to grant access to friends and family through the app. When someone presses the doorbell, the camera captures an image and sends it straight to your phone.\n\nSee who is visiting and unlock the door remotely with a single tap. The large built-in screen doubles as a peephole, giving you a clear view of everything happening outside.\n\nThe door opening direction can be configured directly in the lock settings — no complicated installation steps required. Manage your smart lock anytime, anywhere through the convenient companion app.",
     "badge": "New"
   },
   {
     "id": 4,
-    "title": "MoS-P3 | 3D Face & Fingerprint Recognition Smart Door Lock",
+    "title": "DoS-P3 | 3D Face & Fingerprint Recognition Smart Door Lock",
     "price": 215000,
-    "image": "/images/MOS-P3.jpg",
+    "image": "/images/DOS-P3.jpg",
     "category": "Smart locks",
     "description": "A premium all-in-one smart door lock packed with features: built-in camera, doorbell, display screen, night vision, tamper alarm, and two-way audio for complete home security.\n\nConnects via Wi-Fi and integrates seamlessly with the Tuya app for remote access, video surveillance, and temporary password management.\n\nOffers multiple unlock options including Face Recognition, Fingerprint, Password, Card, Key, and Palm recognition — catering to every member of your household.\n\nConstructed from durable aluminium alloy with a 7.4V 4200mAh rechargeable lithium-ion battery for long-lasting performance. Compatible with standard 24×240mm 6068 mortise.",
     "badge": null
   },
   {
     "id": 5,
-    "title": "Waterproof Tuya 3D Face Recognition Smart Lock Fingerprint Mos-920w",
+    "title": "Waterproof Tuya 3D Face Recognition Smart Lock Fingerprint Dos-920w",
     "price": 280000,
-    "image": "/images/MOS920W.jpg",
+    "image": "/images/DOS920W.jpg",
     "category": "Smart locks",
     "description": "Features 125° wide-angle infrared face recognition that works flawlessly day and night. The wide detection angle accommodates users of all heights, including children. Advanced anti-spoofing technology blocks unlock attempts using photos or moulds.\n\nBuilt-in HD video camera provides live monitoring and recording. Greet visitors with real-time camera streaming and 2-way audio — all controlled from your smartphone.\n\nWhen someone presses the doorbell, an image is instantly sent to your phone. See who is visiting and unlock the door remotely with one tap.\n\nThe large built-in screen functions as a digital peephole, giving you a full view of the area outside your door at any time. Waterproof design ensures reliable performance in all weather conditions.",
     "badge": null
   },
   {
     "id": 6,
-    "title": "Mos-R10pro | 3D Facial Tuya Biometric Door Lock",
+    "title": "Dos-R10pro | 3D Facial Tuya Biometric Door Lock",
     "price": 300000,
-    "image": "/images/MOSR10pro.jpg",
+    "image": "/images/DOSR10pro.jpg",
     "category": "Smart locks",
     "description": "The Mos-R10pro is a sleek and modern biometric door lock finished in an elegant Red Bronze colour. Crafted from premium zinc alloy for lasting durability and a refined look.\n\nOffers 6 versatile unlocking options: 3D Facial Recognition, Fingerprint, Passcode, IC Card, Manual Key, and App-based control via Tuya.\n\nCompact panel dimensions of 59mm × 156mm × 35mm make it compatible with a wide range of door types. Features universal opening direction support.\n\nPowered by a 4200mAh rechargeable battery with Micro USB Type-C emergency power interface — ensuring you are never locked out.",
     "badge": null
   },
   {
     "id": 7,
-    "title": "PD-C2 | SMART TUYA BLE PADLOCK",
+    "title": "RD-C2 | SMART TUYA BLE PADLOCK",
     "price": 90000,
-    "image": "/images/PD-C2.jpg",
+    "image": "/images/RD-C2.jpeg",
     "category": "Smart locks",
     "description": "A versatile smart padlock with multiple access modes: Fingerprint, Tuya Bluetooth App, PIN Code, Card, and Emergency Key — giving you full control over your security.\n\nSupports Admin and User access rights so you can manage who has access and at what level.\n\nBuilt with practical smart features including USB power supply, low battery indicator, and low power consumption for extended use.\n\nIP65 waterproof rated, making it ideal for both indoor and outdoor use — from gates and warehouses to bikes and luggage.",
     "badge": null
   },
   {
     "id": 8,
-    "title": "PD-C1TT | SMART BLE BIOMETRIC TTLOCK PADLOCK",
+    "title": "RD-C1TT | SMART BLE BIOMETRIC TTLOCK PADLOCK",
     "price": 84000,
-    "image": "/images/PD-C1TT.jpg",
+    "image": "/images/RD-C1TT.jpg",
     "category": "Smart locks",
     "description": "A compact and intelligent smart padlock that can be unlocked using your fingerprint, smartphone app (TTLock), or a traditional key.\n\nPerfect for a wide range of uses including gate doors, wooden doors, warehouses, bicycles, scooters, luggage, and suitcases.\n\nPortable, durable, and designed for everyday convenience — keep your belongings secure wherever you go with biometric-level protection.",
     "badge": null

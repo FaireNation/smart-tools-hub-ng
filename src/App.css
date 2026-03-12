@@ -591,8 +591,20 @@
   text-decoration: line-through;
 }
 
+.product-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-about {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
 .btn-buy {
-  width: 100%;
+  flex: 1;
   padding: 10px;
   border-radius: var(--radius-sm);
   font-size: 0.85rem;
@@ -997,6 +1009,17 @@
   font-size: 0.78rem;
   font-weight: 500;
   margin-top: 4px;
+}
+
+.submit-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 .payment-options {
@@ -1578,7 +1601,7 @@
   .product-price { font-size: 1.05rem; }
   .product-old-price { font-size: 0.78rem; }
   .product-category { font-size: 0.7rem; }
-  .btn-buy { padding: 9px; font-size: 0.82rem; }
+  .btn-buy, .btn-about { padding: 9px; font-size: 0.82rem; }
 }
 
 /* --- Features section --- */

@@ -1156,6 +1156,18 @@
   margin-bottom: 0;
 }
 
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.detail-actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
 .detail-features {
   display: flex;
   flex-direction: column;

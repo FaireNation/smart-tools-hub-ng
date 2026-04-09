@@ -1,4 +1,5 @@
-import { FiX, FiShoppingCart } from 'react-icons/fi';
+import { FiX, FiShoppingCart, FiMessageCircle } from 'react-icons/fi';
+import siteConfig from '../config/site';
 
 export default function ProductDetailModal({ product, onClose, onBuyNow }) {
   const formatPrice = (price) =>
@@ -40,15 +41,25 @@ export default function ProductDetailModal({ product, onClose, onBuyNow }) {
                 <p key={i}>{para.trim()}</p>
               ))}
             </div>
-            <button
-              className="btn btn-primary btn-lg"
-              onClick={() => {
-                onClose();
-                onBuyNow(product);
-              }}
-            >
-              <FiShoppingCart /> Buy Now — {formatPrice(product.price)}
-            </button>
+            <div className="detail-actions">
+              <a
+                href={`https://wa.me/${siteConfig.whatsappNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline btn-lg"
+              >
+                <FiMessageCircle /> Contact Us
+              </a>
+              <button
+                className="btn btn-primary btn-lg"
+                onClick={() => {
+                  onClose();
+                  onBuyNow(product);
+                }}
+              >
+                <FiShoppingCart /> Order Now — {formatPrice(product.price)}
+              </button>
+            </div>
           </div>
         </div>
       </div>

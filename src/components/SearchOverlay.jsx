@@ -111,7 +111,7 @@ export default function SearchOverlay({ onClose, onViewDetails, onBuyNow }) {
                       <button
                         className="btn btn-primary btn-sm"
                         onClick={() => handleSelect(product, 'buy')}
-                        title="Buy Now"
+                        title="Order Now"
                       >
                         <FiShoppingCart />
                       </button>

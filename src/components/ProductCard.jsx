@@ -23,7 +23,7 @@ export default function ProductCard({ product, onBuyNow, onViewDetails }) {
           <button className="overlay-btn" onClick={() => onViewDetails(product)} title="Quick View">
             <FiEye />
           </button>
-          <button className="overlay-btn" onClick={() => onBuyNow(product)} title="Buy Now">
+          <button className="overlay-btn" onClick={() => onBuyNow(product)} title="Order Now">
             <FiShoppingCart />
           </button>
         </div>
@@ -42,7 +42,7 @@ export default function ProductCard({ product, onBuyNow, onViewDetails }) {
             <FiEye /> About
           </button>
           <button className="btn btn-primary btn-buy" onClick={() => onBuyNow(product)}>
-            <FiShoppingCart /> Buy Now
+            <FiShoppingCart /> Order Now
           </button>
         </div>
       </div>
